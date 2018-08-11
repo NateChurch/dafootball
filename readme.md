@@ -1,6 +1,6 @@
 # daFootball
 
-This is the build script for a desktop computer converted to a ubuntu 18.04 server to be used as a collaboration platform for a data and analytics charity hackathon by Chevron Modeling and Analytics team for BakerRipley. Special thanks to Microcenter(in Houston off safe) for giving us a discount on the computer.
+This is the build script for a desktop computer converted to a ubuntu 18.04 server to be used as a collaboration platform for a data and analytics charity hackathon by Chevron Modeling and Analytics team for BakerRipley. Special thanks to Microcenter(in Houston) for giving us a discount on the computer.
 
 ## Target
 - Docker

@@ -3,11 +3,8 @@
   connection: local
 
   pre_tasks:
-    - file:
-      path: roles
-      state: absent
-    
-    - local_action: command ansible-galaxy install -r requirements.yml
+    - name: Load Requirements
+      local_action: command ansible-galaxy install -r requirements.yml
 
   vars:
     docker_edition: 'ce'

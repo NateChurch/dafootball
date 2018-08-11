@@ -14,6 +14,6 @@
     docker_apt_release_channel: stable
     docker_apt_arch: amd64
   
-  roles:
-    - role: ansible-role-docker
+#   roles:
+#     - role: ansible-role-docker
     

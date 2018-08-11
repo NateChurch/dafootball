@@ -4,7 +4,7 @@
 
   pre_tasks:
     - name: Load Requirements
-      local_action: command ansible-galaxy install -r requirements.yml
+      local_action: command ansible-galaxy install -r  ./roles/requirements.yml
 
   vars:
     docker_edition: 'ce'

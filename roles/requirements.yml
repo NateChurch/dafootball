@@ -7,5 +7,5 @@
   scm: git
 
 - src: https://github.com/andrewrothstein/ansible-anaconda.git
-  version: 76dba26995115de4f54e3a69e039d930baec7745
+  version: master #76dba26995115de4f54e3a69e039d930baec7745
   scm: git

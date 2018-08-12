@@ -18,9 +18,9 @@
       apt: name_{{ item }}
       with_items:
         - python-pip
-      install_recommends: yes
+      install_recommends: True
       become: yes
-      update_cache: yes
+      update_cache: True
 
     - name: Install Python packages
       pip: name={{ item }}

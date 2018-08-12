@@ -1,10 +1,13 @@
 ---
 - hosts: localhost
   connection: local
+  gather_facts: False
 
   pre_tasks:
     - name: Load Requirements
       local_action: command ansible-galaxy install -r  ./roles/requirements.yml
+    - name: Gathering Facts
+      setup:
 
   vars:
     docker_edition: 'ce'

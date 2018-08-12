@@ -15,12 +15,12 @@
 
   tasks:
     - name: Install pip2
-      apt: name_{{ item }}
+      apt: name={{ item }}
       with_items:
         - python-pip
-      install_recommends: True
+      install_recommends: yes
       become: yes
-      update_cache: True
+      update_cache: yes
 
     - name: Install Python packages
       pip: name={{ item }}

@@ -18,6 +18,7 @@
       apt: name_{{ item }}
       with_items:
         - python-pip
+      install_recommends: yes
       become: yes
       update_cache: yes
 

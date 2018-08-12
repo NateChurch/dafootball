@@ -3,9 +3,9 @@
   connection: local
 
   pre_tasks:
-    - name: Load Requirements
+   - name: Load Requirements
       local_action: command ansible-galaxy install -r  ./roles/requirements.yml
-
+      
   vars:
     docker_edition: 'ce'
     docker_apt_release_channel: stable
@@ -13,4 +13,21 @@
   
   roles:
     - role: ansible-role-docker
+
+  tasks:
+    # - name: pull Shiny container
+    #   docker_image: 
+    #     name: rocker\shiny
+    #     state: present
     
+    - name: run Shiny container
+      docker_container:
+        name: shiny
+        image: rocker\shiny
+        state: started
+        pull: no            #Always pull latest version
+        ports:
+          - "3838:3838"
+        volumes:
+          - "/srv/shinyapps/:/srv/shiny-server/"
+          - "/srv/shinylog/:/var/log/shiny-server/"

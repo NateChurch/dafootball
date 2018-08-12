@@ -19,7 +19,12 @@
     #   docker_image: 
     #     name: rocker\shiny
     #     state: present
-    
+    - name: Install Python packages
+      pip: name={{ item }}
+        with_items:
+          - docker
+      become: yes
+
     - name: run Shiny container
       docker_container:
         name: shiny

@@ -1,0 +1,7 @@
+- hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Load Requirements
+      local_action: command ansible-galaxy install -r  ./roles/requirements.yml
+

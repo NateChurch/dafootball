@@ -5,3 +5,7 @@
 - src: https://github.com/NateChurch/ansible-role-docker.git
   version: master
   scm: git
+
+- src: https://github.com/andrewrothstein/ansible-anaconda.git
+  version: 76dba26995115de4f54e3a69e039d930baec7745
+  scm: git

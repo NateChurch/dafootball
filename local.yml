@@ -10,15 +10,20 @@
     docker_edition: 'ce'
     docker_apt_release_channel: stable
     docker_apt_arch: amd64
+    anaconda_python_ver : 3
+    anaconda_ver: '5.1.0'
   
   roles:
     - role: ansible-role-docker
+    - role: ansible-anaconda
 
   tasks:
-    # - name: pull Shiny container
-    #   docker_image: 
-    #     name: rocker\shiny
-    #     state: present
+    - name: Install pip2
+      apt: name_{{ item }}
+      with_items:
+        - python-pip
+      become: yes
+
     - name: Install Python packages
       pip: name={{ item }}
       with_items:

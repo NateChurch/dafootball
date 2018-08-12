@@ -19,6 +19,7 @@
       with_items:
         - python-pip
       become: yes
+      update_cache: yes
 
     - name: Install Python packages
       pip: name={{ item }}

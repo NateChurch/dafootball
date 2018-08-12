@@ -1,7 +1,4 @@
-# - src: https://github.com/geerlingguy/ansible-role-docker.git
-#   version: master
-#   scm: git
-
+---
 - src: https://github.com/NateChurch/ansible-role-docker.git
   version: master
   scm: git

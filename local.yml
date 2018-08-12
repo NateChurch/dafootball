@@ -31,7 +31,7 @@
     - name: run Shiny container
       docker_container:
         name: shiny
-        image: rocker\shiny
+        image: rocker/shiny
         state: started
         pull: no            #Always pull latest version
         ports:

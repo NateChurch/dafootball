@@ -30,8 +30,8 @@ sudo apt-get update
 sudo apt-get install ansible
 ssh-keygen -t rsa -b 4096
 cat /home/ds/.ssh/id_rsa.pub
+sudo ansible-pull -U https://github.com/NateChurch/dafootball.git --full -vvvv pullrequirements.yml
 sudo ansible-pull -U https://github.com/NateChurch/dafootball.git --full -vvvv
-
    ```
 
 ## Ansible Roles

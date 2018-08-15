@@ -39,3 +39,16 @@
         volumes:
           - "/srv/shinyapps/:/srv/shiny-server/"
           - "/srv/shinylog/:/var/log/shiny-server/"
+
+    - name: run MSSQL container
+      docker_container:
+        name: sql01
+        image: microsoft/mssql-server-linux
+        state: started
+        pull: no            #Always pull latest version
+        ports:
+          - "1433:1433"
+        env:
+          ACCEPT_EULA: Y
+          SA_PASSWORD: Volunteer1
+          

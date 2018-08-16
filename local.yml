@@ -57,10 +57,10 @@
       docker_container:
         name: jupyterhub
         image: jupyterhub/jupyterhub
-        state: started
+        state: stopped
         pull: no            #Always pull latest version
         ports:
           - "8000:8000"
-        env:
-          ACCEPT_EULA: Y
-          SA_PASSWORD: Volunteer1
+
+    - name: Install JupyterHub Locally
+      command: conda install -c conda-forge jupyterhub

@@ -8,6 +8,7 @@
     docker_apt_arch: amd64
     anaconda_python_ver : 3
     anaconda_ver: '5.1.0'
+    anaconda_make_sys_default : True
   
   roles:
     - role: ansible-role-docker

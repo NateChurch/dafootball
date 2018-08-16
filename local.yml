@@ -51,4 +51,15 @@
         env:
           ACCEPT_EULA: Y
           SA_PASSWORD: Volunteer1
-          
+
+    - name: run JupyterHub container
+      docker_container:
+        name: jupyterhub
+        image: jupyterhub/jupyterhub
+        state: started
+        pull: no            #Always pull latest version
+        ports:
+          - "8000:8000"
+        env:
+          ACCEPT_EULA: Y
+          SA_PASSWORD: Volunteer1
